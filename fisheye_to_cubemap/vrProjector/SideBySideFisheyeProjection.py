@@ -27,6 +27,13 @@ class SideBySideFisheyeProjection(AbstractProjection):
     if theta is None or phi is None:
       return (0,0,0)
     
+    # if (phi < 0):
+    #   return (255,0,0)
+    # if (phi > 1):
+    #   return (0,255,0)
+    # if (theta + phi_offset) > mp.pi:
+    #   return (0,0,0)
+    
     # z is elevation in this case
     sphere_pnt = self.point_on_sphere(theta, phi, theta_offset= theta_offset, phi_offset=phi_offset)
 
