@@ -29,7 +29,7 @@ def rotate_fisheye(input_img, output_img):
 
     # theta_offset: 垂直方向の回転角度
     # phi_offset: 水平方向の回転角度
-    source.reprojectToThis(source, theta_offset= mp.pi /4, phi_offset= mp.pi/3)
+    source.reprojectToThis(source, theta_offset=mp.pi /4, phi_offset= mp.pi/3)
     source.saveImage_half('rotate_fisheye.png', side)
 
     # out = vrProjector.CubemapProjection()
@@ -49,4 +49,4 @@ def fisheye_to_cubemap_folder(input_folder, output_folder):
 # output_folder = '/mmdetection/grape/data/cubemap/'
 # fisheye_to_cubemap_folder(input_folder, output_folder)
         
-rotate_fisheye('/Users/nobu/research/mmdetection-grape/fisheye_to_cubemap/test.png', '/Users/nobu/research/mmdetection-grape/fisheye_to_cubemap/hoge_half_rotate.png')
+rotate_fisheye('/Users/nobu/research/mmdetection-grape/fisheye_to_cubemap/hoge_half.png', '/Users/nobu/research/mmdetection-grape/fisheye_to_cubemap/hoge_half_rotate.png')
